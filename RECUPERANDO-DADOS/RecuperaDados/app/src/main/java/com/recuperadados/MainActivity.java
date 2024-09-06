@@ -36,7 +36,9 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState(outState);
-        int numero = Integer.parseInt(etNumero.getText().toString());
-        outState.putInt("NUMERO", numero);
+        if (!etNumero.getText().toString().isEmpty()) {
+            int numero = Integer.parseInt(etNumero.getText().toString());
+            outState.putInt("NUMERO", numero);
+        }
     }
 }
