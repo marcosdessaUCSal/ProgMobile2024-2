@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginBottom="5dp"
+    app:cardBackgroundColor="#5993C3"
+    app:cardCornerRadius="30dp"
+    app:cardElevation="5dp">
+
+    <LinearLayout
+        android:id="@+id/tarefa_template"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#00D81B60"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/checkbox_tarefa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:buttonTint="@color/colorAccent"
+            android:buttonTintMode="src_in"
+            android:clickable="false"
+            app:useMaterialThemeColors="true" />
+
+        <TextView
+            android:id="@+id/tv_texto_tarefa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="8"
+            android:text="TextView"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
