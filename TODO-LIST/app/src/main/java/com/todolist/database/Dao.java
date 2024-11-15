@@ -87,8 +87,7 @@ public class Dao {
 
     public boolean marcarOuDesmarcarTarefa(Tarefa tarefa) {
         String valorMarcadoInvertido = tarefa.marcado ? "0" : "1";
-        System.out.println("=== valor marcado recebido: " + tarefa.marcado);
-        SQLiteDatabase db = dbHelper.getReadableDatabase();
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
         ContentValues cv = new ContentValues();
         cv.put("MARCADO", valorMarcadoInvertido);
         try {
@@ -195,12 +194,12 @@ public class Dao {
 
     public boolean reset() {
         return
-        this.limparBanco() &
-        this.novaTarefa("Escovar dentes") &
-        this.novaTarefa("Pentear o cabelo") &
-        this.novaTarefa("Lavar os pratos") &
-        this.novaTarefa("Tomar banho") &
-        this.novaTarefa("Fazer o dever de casa") &
+        this.limparBanco() &&
+        this.novaTarefa("Escovar dentes") &&
+        this.novaTarefa("Pentear o cabelo") &&
+        this.novaTarefa("Lavar os pratos") &&
+        this.novaTarefa("Tomar banho") &&
+        this.novaTarefa("Fazer o dever de casa") &&
         this.novaTarefa("Ir ao cinema");
     }
 }
